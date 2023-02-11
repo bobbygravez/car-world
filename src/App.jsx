@@ -40,7 +40,6 @@ function App() {
           return response.json()
         })
         .then(data => {
-          console.log(data)
           if(data.length === 0){
             setNoData(true)
           } else{
