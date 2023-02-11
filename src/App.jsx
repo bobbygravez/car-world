@@ -3,7 +3,7 @@ import Header from './header'
 import Body from './body'
 import { nanoid } from "nanoid";
 import CarDetails from './cardetails';
-import Loader from "src/assets/loader.gif"
+import Loader from "./src/assets/loader.gif"
 
 
 function App() {
