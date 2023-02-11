@@ -1,4 +1,5 @@
 import React from "react";
+import car from "./assets/car.jfif"
 
 
 function Body(props){
@@ -21,7 +22,7 @@ function Body(props){
     return(
         <div className="body">
             <div className="watermark">
-                <img src="src/assets/car.jfif" alt="" />
+                <img src={car} alt="" />
             </div>
             {props.noData? <h2 className="no-result">Sorry!, there are no results for your search, please try adjusting your search parameters.</h2> : data}
         </div>
