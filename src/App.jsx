@@ -3,6 +3,7 @@ import Header from './header'
 import Body from './body'
 import { nanoid } from "nanoid";
 import CarDetails from './cardetails';
+import Loader from "src/assets/loader.gif"
 
 
 function App() {
@@ -18,7 +19,6 @@ function App() {
     limit: 10
  })
 
- console.log(noData)
 
  function handleChange(e){
   const {name, value} = e.target
@@ -97,7 +97,7 @@ function App() {
     <div>
       {showDetails?  <CarDetails carData={carData} carId={carId} hideDetails={hideDetails}/> : <div className='app'>
           <Header handleChange={handleChange} getCars={getCars} carSpec={carSpec}/>
-          {loading? <img src="src/assets/loader.gif" alt="loader" className='loader'/> : <Body carData={carData} getCarId={getCarId} displayDetails={displayDetails} noData={noData}/>}
+          {loading? <img src={Loader} alt="loader" className='loader'/> : <Body carData={carData} getCarId={getCarId} displayDetails={displayDetails} noData={noData}/>}
       </div>}
       
     </div>
